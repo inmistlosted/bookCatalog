@@ -1,0 +1,25 @@
+extends index
+
+block menu
+    ul(class="navbar-nav mr-auto")
+        li(class="nav-item")
+            button(onclick="window.location.href = 'requests'")
+        li(class="nav-item active")
+            a(class="nav-item nav-link active text-uppercase" href="/") головна
+        li(class="nav-item")
+            a(class="nav-item nav-link text-uppercase" href="books") книги
+        li(class="nav-item")
+            a(class="nav-item nav-link text-uppercase" href="aboutus") про нас
+
+block content
+
+    div(class="content")
+        img(
+            src= image
+            class="img-fluid"
+            alt="Зображення"
+        )
+
+        h1(class="message1" style=`color: ${bgcolor}`) Насолоджуйтесь нашим класним сайтом! Хто не хоче насолоджуватися - Вам же гірше!
+
+        h2(style="margin-top: 8vh;") Ласкаво просимо до нашого книжкового каталогу!

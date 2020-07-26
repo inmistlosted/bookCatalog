@@ -1,0 +1,82 @@
+* {
+  box-sizing: border-box;
+}
+
+.bg-green
+{
+    min-height: 10vh;
+}
+
+.size-1_5{
+    font-size: 3.5em;
+}
+
+.invite{
+    position: absolute;
+    width: 30%;
+    left: 67%;
+    top: 20vh;
+
+    padding: 1%;
+    margin-bottom: 5vh;
+}
+
+.content{
+    position: absolute;
+    width: 60%;
+    left: 3%;
+    top: 20vh;
+    padding: 1%;
+    margin-bottom: 5vh;
+}
+
+.margint5{
+    margin-top: 8vh;
+}
+
+.marginb3{
+    margin-bottom: 4vh;
+}
+
+.message1{
+    color: #008080;
+    margin-top: 7vh;
+}
+
+.book{
+    background-color: #f0ffff;
+    margin-bottom: 2vh;
+    padding: 1vh 1%;
+}
+
+.params{
+    margin-left: 1%;
+    font-family: "Calibri Light", sans-serif;
+}
+
+.bookttl{
+    margin-top: 0;
+    text-align: center;
+}
+
+.telerr
+{
+    display: none;
+}
+
+.phonerr
+{
+    display: inline-block;
+}
+
+.tbl
+{
+    margin: 4vh 5%;
+}
+
+.back{
+    position: absolute;
+    top: 1vh;
+    left: .5%;
+}
+

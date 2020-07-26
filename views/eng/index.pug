@@ -1,0 +1,80 @@
+doctype html
+html
+    head
+        title= name
+        style
+            include ../../public/style.css
+        link(
+        rel="stylesheet"
+        href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+        crossorigin="anonymous"
+        )
+    body
+        nav(
+        class='navbar navbar-expand-lg navbar-dark font-weight-bold'
+        style=`background-color: ${bgcolor}`
+        )
+            a(
+            class="navbar-brand"
+            href="/eng"
+            )= domen
+            span(class="navbar-brand") |
+
+            div(
+            class="collapse navbar-collapse"
+            style="min-height: 10vh"
+            )
+                block menu
+                span(class="navbar-text")
+                    a(class="nav-item nav-link active text-uppercase" href="/eng") eng
+                span(class="navbar-text")
+                    a(class="nav-item nav-link active text-uppercase" href="/") ukr
+
+        block content
+
+        form(class="invite border border-success" id="request")
+            button(type="submit" class="btn btn-danger text-uppercase" style="width: 100%; font-weight: bold") send request
+            div(class="form-group margint5 font-weight-bold")
+                label(for="name" class="marginb3") Name and surname:
+                input(
+                type="text"
+                class="form-control"
+                id="name"
+                )
+            div(class="form-group margint5 font-weight-bold")
+                label(for="phone" class="marginb3") Telephone number:
+                input(
+                type="tel"
+                class="form-control"
+                id="phone"
+                )
+                p(class="telerr" id="phoneerr") Wrong inserted phone
+            div(class="form-group margint5 font-weight-bold")
+                label(for="comment" class="marginb3") Add comment:
+                textarea(
+                class="form-control"
+                id="comment"
+                rows="6"
+                )
+
+
+
+        script(
+        src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"
+        )
+        script(
+        src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"
+        )
+        script(
+        src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"
+        )
+        script
+            include ../../public/script.js
+

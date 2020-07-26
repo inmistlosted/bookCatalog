@@ -1,0 +1,26 @@
+extends index
+
+block menu
+    ul(class="navbar-nav mr-auto")
+        li(class="nav-item")
+            button(onclick="window.location.href = 'requests'")
+        li(class="nav-item")
+            a(class="nav-item nav-link text-uppercase" href="/") головна
+        li(class="nav-item")
+            a(class="nav-item nav-link active text-uppercase" href="books") книги
+        li(class="nav-item")
+            a(class="nav-item nav-link text-uppercase" href="aboutus") про нас
+
+block content
+    div(class="content")
+        h1(class="message1 bookttl text-uppercase font-weight-bold" style=`color: ${bgcolor}`) книги:
+        each book in books
+            div(class="book")
+
+                p(style="margin-bottom: 0;")
+                    span(class="font-weight-bold") Автор:
+                    span(class="params") #{book.author}
+                p(style="margin-bottom: 0;")
+                    span(class="font-weight-bold") Назва:
+                    span(class="params") #{book.name}
+                a(href="javascript:function() { return false; }" onclick=`getDescription(this.parentNode, ${book.year}, "${book.description}")` ) Детальніше...

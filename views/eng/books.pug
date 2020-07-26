@@ -1,0 +1,26 @@
+extends index
+
+block menu
+    ul(class="navbar-nav mr-auto")
+        li(class="nav-item")
+            button(onclick="window.location.href = 'requests'")
+        li(class="nav-item")
+            a(class="nav-item nav-link text-uppercase" href="/eng") main
+        li(class="nav-item")
+            a(class="nav-item nav-link active text-uppercase" href="books") books
+        li(class="nav-item")
+            a(class="nav-item nav-link text-uppercase" href="aboutus") about us
+
+block content
+    div(class="content")
+        h1(class="message1 bookttl text-uppercase font-weight-bold" style=`color: ${bgcolor}`) books:
+        each book in books
+            div(class="book")
+
+                p(style="margin-bottom: 0;")
+                    span(class="font-weight-bold") Author:
+                    span(class="params") #{book.author}
+                p(style="margin-bottom: 0;")
+                    span(class="font-weight-bold") Name:
+                    span(class="params") #{book.name}
+                a(href="javascript:function() { return false; }" onclick=`getDescriptionEng(this.parentNode, ${book.year}, "${book.description}")` ) Details...

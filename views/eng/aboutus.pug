@@ -1,0 +1,16 @@
+extends index
+
+block menu
+    ul(class="navbar-nav mr-auto")
+        li(class="nav-item")
+            button(onclick="window.location.href = 'requests'")
+        li(class="nav-item")
+            a(class="nav-item nav-link text-uppercase" href="/eng") main
+        li(class="nav-item")
+            a(class="nav-item nav-link text-uppercase" href="/eng/books") books
+        li(class="nav-item")
+            a(class="nav-item nav-link active text-uppercase" href="/eng/aboutus") about us
+
+block content
+    div(class="content")
+        p We are cool!

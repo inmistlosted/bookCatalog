@@ -1,0 +1,25 @@
+extends index
+
+block menu
+    ul(class="navbar-nav mr-auto")
+        li(class="nav-item")
+            button(onclick="window.location.href = 'eng/requests'")
+        li(class="nav-item active")
+            a(class="nav-item nav-link active text-uppercase" href="/eng") main
+        li(class="nav-item")
+            a(class="nav-item nav-link text-uppercase" href="eng/books") books
+        li(class="nav-item")
+            a(class="nav-item nav-link text-uppercase" href="eng/aboutus") about us
+
+block content
+
+    div(class="content")
+        img(
+        src= image
+        class="img-fluid"
+        alt="Image"
+        )
+
+        h1(class="message1" style=`color: ${bgcolor}`) Enjoy our cool web site! Who does not want to enjoy - You feel worse!
+
+        h2(style="margin-top: 8vh;") Welcome to our book catalog!
